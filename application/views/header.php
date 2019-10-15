@@ -12,6 +12,11 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/vendor_home.css');?>" media="all"/>
 
 
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+
+
+
+
 <body>
   <div class="top-bar">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -98,3 +103,5 @@
       </div> <!-- top-nav -->
     </nav> <!-- navbar -->
   </div> <!-- top-bar -->
+  <i class="fab fa-angellist"></i>
+
