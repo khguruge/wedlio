@@ -72,8 +72,29 @@
               </div></a></li>
         </ul>
           <a href="<?php echo base_url('index.php/Vendor/Login');?>"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button></a>
-          <a href="<?php echo base_url('index.php/Vendor/SignUp');?>"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button></a>
 
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" type="button" data-toggle="modal" data-target="#myModal">Sign Up</button>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+    
+            <!-- Modal content-->
+              <div class="modal-content">
+        
+                <div class="modal-body">
+                  <p>Customer Or Vendor</p>
+                  <div style="padding-left:150px">
+                    <a href="<?php echo base_url('index.php/Vendor/Login');?>"><button type="button" class="btn btn-success" >Customer</button></a>
+                    <a href="<?php echo base_url('index.php/Vendor/SignUp');?>"><button type="button" class="btn btn-success">Vendor</button></a>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div> <!-- modal-footer -->
+              </div> <!-- modal-content -->
+      
+            </div> <!-- modal-dialog -->
+          </div> <!-- modal -->
       </div> <!-- top-nav -->
     </nav> <!-- navbar -->
   </div> <!-- top-bar -->
