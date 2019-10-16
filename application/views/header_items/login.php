@@ -1,5 +1,3 @@
-<?php include_once("header.php")?>
-
 <div class="container">
 
 	<h1>Login</h1>
@@ -19,6 +17,3 @@
 	<? form_close() ?>
 	
 </div>
-
-
-<?php include_once("footer.php")?>
