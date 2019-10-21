@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class add_users extends CI_Model {
+class add_vendor extends CI_Model {
 
 	function InsertUserData(){
 		
@@ -13,6 +13,7 @@ class add_users extends CI_Model {
 
 		);
 		$this->db->insert('users',$data);
+		echo "Vendor Registered";
 
 	}
 

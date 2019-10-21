@@ -64,13 +64,13 @@ class Home extends CI_Controller {
 
 	public function CustomerSignUp(){
 		$this->load->view('header');
-		$this->load->view('header_items/login');
+		$this->load->view('header_items/customer_sign_up');
 		$this->load->view('footer');
 	}
 
 	public function VenderSignUp(){
 		$this->load->view('header');
-		$this->load->view('header_items/sign_up');
+		$this->load->view('header_items/vendor_sign_up');
 		$this->load->view('footer');
 	}
 

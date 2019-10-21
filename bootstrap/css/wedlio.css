@@ -112,8 +112,3 @@ div.collapse ul li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-div.col-md-4 img {
-  width: 10px;
-  height: 10px;
-}

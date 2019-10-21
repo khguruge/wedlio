@@ -4,7 +4,7 @@
 
 	<?php echo validation_errors(); ?>
 
-	<?php echo form_open('sign_up/RegisterUser');  ?>
+	<?php echo form_open('sign_up/RegisterVendor');  ?>
 
 		<div class="form-group">
 	    	<label for="email">First Name:</label>
@@ -44,9 +44,6 @@
 	  	<div class="form-group">
 	    	<label for="pwd">Confirm Password:</label>
 			<input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
-	  	</div>
-	  	<div class="checkbox">
-	    	<label><input type="checkbox"> Remember me</label>
 	  	</div>
 	  	<button type="submit" class="btn btn-default">Submit</button>
 	<? form_close(); ?>
