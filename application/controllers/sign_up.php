@@ -9,7 +9,7 @@ class sign_up extends CI_Controller {
 	{
 		$this->form_validation->set_rules('first_name', 'First Name', 'required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[customers.email]');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'required|matches[password]');
 
@@ -30,7 +30,10 @@ class sign_up extends CI_Controller {
 	{
 		$this->form_validation->set_rules('first_name', 'First Name', 'required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
+		$this->form_validation->set_rules('category', 'Vendor Category', 'required');
+		$this->form_validation->set_rules('business_name', 'Business Name', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[vendors.email]');
+		$this->form_validation->set_rules('features', 'Features of your business', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'required|matches[password]');
 
