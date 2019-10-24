@@ -1,6 +1,11 @@
 <div class="container">
 
 	<h1>Sign Up</h1>
+<?php
+	if ($this->session->flashdata('msg')){
+		echo "<h3>".$this->session->flashdata('msg')."</h3>";
+	} 
+?>
 
 	<?php echo validation_errors(); ?>
 

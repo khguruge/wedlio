@@ -15,8 +15,7 @@ class add_vendor extends CI_Model {
 			'password' => sha1($this->input->post('password'))
 
 		);
-		$this->db->insert('vendors',$data);
-		echo "Vendor Registered";
+		return $this->db->insert('vendors',$data);
 
 	}
 

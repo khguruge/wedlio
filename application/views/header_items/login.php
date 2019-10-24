@@ -1,5 +1,9 @@
 <div class="container">
-
+	<?php
+	if ($this->session->flashdata('msg')){
+		echo "<h3>".$this->session->flashdata('msg')."</h3>";
+	} 
+?>	
 	<h1>Login</h1>
 	<?php echo form_open("sign_up/RegisterUser")  ?>
 	  <div class="form-group">

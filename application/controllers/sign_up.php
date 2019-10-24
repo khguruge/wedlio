@@ -22,7 +22,14 @@ class sign_up extends CI_Controller {
                 else
                 {
                         $this->load->model('add_customer');
-                        $this->add_customer->InsertUserData();
+                        $reply = $this->add_customer->InsertUserData();
+                        if ($reply){
+                        	$this->session->set_flashdata('msg', 'Registration Successfully.Please Login.');
+                        	redirect('Home/Login');
+                        } else {
+                        	$this->session->set_flashdata('msg', 'Something Went Wrong.Please Try Again.');
+                        	redirect('Home/CustomerSignUp');
+                        }
                 }
 
 	}
@@ -46,7 +53,14 @@ class sign_up extends CI_Controller {
                 else
                 {
                         $this->load->model('add_vendor');
-                        $this->add_vendor->InsertUserData();
+                        $reply =$this->add_vendor->InsertUserData();
+                        if ($reply){
+                        	$this->session->set_flashdata('msg', 'Registration Successfully. Please Check Your Email.');
+                        	redirect('Home/Login');
+                        } else {
+                        	$this->session->set_flashdata('msg', 'Something Went Wrong.Please Try Again.');
+                        	redirect('Home/VenderSignUp');
+                        }
                 }
 
 	}

@@ -12,8 +12,7 @@ class add_customer extends CI_Model {
 			'password' => sha1($this->input->post('password'))
 
 		);
-		$this->db->insert('customers',$data);
-		echo "Customer Registered";
+		return $this->db->insert('customers',$data);
 
 
 	}
