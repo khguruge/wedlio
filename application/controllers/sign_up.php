@@ -5,19 +5,18 @@ class sign_up extends CI_Controller {
 
 
 
-		public function RegisterCustomer()
-	{
-		$this->form_validation->set_rules('first_name', 'First Name', 'required');
-		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[customers.email]');
-		$this->form_validation->set_rules('password', 'Password', 'required');
-		$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'required|matches[password]');
+		public function RegisterCustomer(){
+        		$this->form_validation->set_rules('first_name', 'First Name', 'required');
+        		$this->form_validation->set_rules('last_name', 'Last Name', 'required');
+        		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[customers.email]');
+        		$this->form_validation->set_rules('password', 'Password', 'required');
+        		$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'required|matches[password]');
 
 		if ($this->form_validation->run() == FALSE)
                 {
                         $this->load->view('header');
-						$this->load->view('header_items/customer_sign_up');
-						$this->load->view('footer');
+			$this->load->view('header_items/customer_sign_up');
+			$this->load->view('footer');
                 }
                 else
                 {
