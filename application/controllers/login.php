@@ -24,7 +24,7 @@ class login extends CI_Controller {
                      'last_name'=>$result->last_name,
                      'email'=>$result->email,
                      'loggedin'=>TRUE);
-                 
+
                  print_r($_SESSION);
                  $this->session->set_userdata($user_data);
                  $this->session->set_flashdata('msg','Welcome');
@@ -34,6 +34,17 @@ class login extends CI_Controller {
                  redirect('Home/Login');
              }
          }
+    }
+
+    public function CustomerLogout()
+    {
+
+        $this->session->unset_userdata('id');
+        $this->session->unset_userdata('first_name');
+        $this->session->unset_userdata('last_name');
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('loggedin');
+        redirect('Home/Login');
     }
 
 }
