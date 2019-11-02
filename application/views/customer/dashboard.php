@@ -20,7 +20,16 @@
 
 </head>
 
-<body class="">
+<body>
+	<?php
+	if (!($this->session->userdata('loggedin'))){
+		redirect('Home/Login');
+	}
+	// if ($this->session->flashdata('msg')){
+	// 	echo "<h3>".$this->session->flashdata('msg')."</h3>";
+	// } 
+?>
+
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="<?php echo $this->config->item('base_url'); ?>/assets/img/sidebar-1.jpg">
 
@@ -147,7 +156,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="<?php echo base_url('index.php/login/CustomerLogout'); ?>">Log out</a>
                 </div>
               </li>
             </ul>
