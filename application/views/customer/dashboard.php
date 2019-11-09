@@ -1,237 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/img/apple-icon.png');?>" media="all"/>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/img/favicon.png');?>" media="all"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Material Dashboard by Creative Tim
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/material-dashboard.css?v=2.1.1');?>" media="all"/>
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/demo/demo.css');?>" media="all"/>
-
-</head>
-
+  <title>hi</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/dashboard.css');?>" media="all"/></head>
 <body>
-	<?php
-	if (!($this->session->userdata('loggedin'))){
-		redirect('Home/Login');
-	}
-	// if ($this->session->flashdata('msg')){
-	// 	echo "<h3>".$this->session->flashdata('msg')."</h3>";
-	// } 
-?>
 
-  <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="<?php echo $this->config->item('base_url'); ?>/assets/img/sidebar-1.jpg">
 
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a>
-      </div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+
+
+ <div class="top-bar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-light fixed-top flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand" href="<?php echo base_url('index.php/Home/index');?>"><img src="<?php echo $this->config->item('base_url'); ?>/img/assets/wedlio_logo.png" class="responsive"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="top-nav navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li><a href="<?php echo base_url('index.php/Home/PlanningTools');?>"><div class="dropdown">
+                <button class="dropbtn">planning tools</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div></a></li>
+
+          <li><a href="<?php echo base_url('index.php/Home/WeddingVision');?>"><div class="dropdown">
+                <button class="dropbtn">wedding vision</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div></a></li>
+          <li><a href="<?php echo base_url('index.php/Home/LocalVendors');?>"><div class="dropdown">
+                <button class="dropbtn">local vendors</button>
+                <div class="dropdown-content">
+                  <a href="<?php echo base_url('index.php/Home/WeddingPlanners');?>">Wedding Planners</a>
+                  <a href="<?php echo base_url('index.php/Home/ReceptionVenues');?>">Reception Venues</a>
+                  <a href="<?php echo base_url('index.php/Home/Videographers');?>">Videographers</a>
+                  <a href="<?php echo base_url('index.php/Home/Photographers');?>">Photographers</a>
+                  <a href="<?php echo base_url('index.php/Home/BridalSalons');?>">Bridal Salons</a>
+                  <a href="<?php echo base_url('index.php/Home/DJs');?>">DJs</a>
+                  <a href="<?php echo base_url('index.php/Home/WeddingBands');?>">Wedding Bands</a>
+                  <a href="<?php echo base_url('index.php/Home/Rentals');?>">Rentals</a>
+                </div>
+              </div></a></li>
+
+          <li><a href="<?php echo base_url('index.php/Home/Gallery');?>"><div class="dropdown">
+                <button class="dropbtn">gallery</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div></a></li>
+
+          <li><a href="<?php echo base_url('index.php/Home/Budgeter');?>"><div class="dropdown">
+                <button class="dropbtn">budgeter</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div></a></li>
+        </ul>
+          
+          <a href="<?php echo base_url('index.php/Home/Budgeter');?>"><div class="dropdown">
+                <img src="<?php echo $this->config->item('base_url'); ?>/img/assets/icon/account.png" class="responsive" width="25px" height="25px">
+                <div class="dropdown-content">
+                  <a href="#">Your Profile</a>
+                  <a href="#">Community</a>
+                  <a href="<?php echo base_url('index.php/login/CustomerLogout'); ?>">Log Out</a>
+                </div>
+              </div></a>
+
+          
+          
+      </div> <!-- top-nav -->
+    </nav> <!-- navbar -->
+  </div> <!-- top-bar -->
+
+<div class="container-fluid" >
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+              Dashboard <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
-              <i class="material-icons">person</i>
-              <p>User Profile</p>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span>
+              Orders
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart"></span>
+              Products
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Typography</p>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Customers
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              Reports
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
-            </a>
-          </li>
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Integrations
             </a>
           </li>
         </ul>
+
+       
       </div>
-    </div>
-    <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
           </button>
-          <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
-                    Account
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="<?php echo base_url('index.php/login/CustomerLogout'); ?>">Log out</a>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
-      <!-- End Navbar -->
+      </div>
 
-  <!--   Core JS Files   -->
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/core/jquery.min.js"></script>
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/core/popper.min.js"></script>
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  
-  <!-- Chartist JS -->
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/plugins/chartist.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="<?php echo $this->config->item('base_url'); ?>/assets/demo/demo.js"></script>
- 
-</body>
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>dashboard</title>
-</head>
-<body>	
-
-<?php
-	if (!($this->session->userdata('loggedin'))){
-		redirect('Home/Login');
-	}
-
-
-
-	if ($this->session->flashdata('msg')){
-		echo "<h3>".$this->session->flashdata('msg')."</h3>";
-	} 
-?>	
-
-<?php 
-echo $this->session->userdata('first_name');
-?>
-
-<a href="<?php echo base_url('index.php/login/CustomerLogout'); ?>">Logout</a>
-
-
-
-<h3>Dashboard</h3>
-</body>
-</html> -->
+      </div>
+    </main>
+  </div>
+</div>
