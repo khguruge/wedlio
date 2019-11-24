@@ -1,7 +1,8 @@
 
 <footer class="footer" style="background-color: #222;
     color: #ccc;
-    padding: 60px 0 30px">
+    padding: 60px 0 30px;
+    z index: -1;">
           <div class="container">
           <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-12">

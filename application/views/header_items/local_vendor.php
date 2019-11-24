@@ -27,16 +27,23 @@
           <img src="<?php echo $this->config->item('base_url'); ?>/img/assets/temp.jpg" class="responsive">
             <div class="centered">Centered</div>
         </div>
+
       </div> <!-- column -->
       <div class="column">
         <div class="vendor-description">
           <img src="<?php echo $this->config->item('base_url'); ?>/img/assets/temp.jpg" class="responsive">
             <div class="centered">Centered</div>
+
+            hello
         </div>
+
+
         <div class="vendor-description">
           <img src="<?php echo $this->config->item('base_url'); ?>/img/assets/temp.jpg" class="responsive">
             <div class="centered">Centered</div>
         </div>
+
+
       </div> <!-- column -->
       <div class="column">
         <div class="vendor-description">
