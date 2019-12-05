@@ -8,10 +8,14 @@
 <body>
 
 
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand" href="<?php echo base_url('index.php/Home/index');?>"><img src="<?php echo $this->config->item('base_url'); ?>/img/assets/wedlio_logo.png" class="responsive" style="width: 80px;height: 30px;" ></a>
- 
- 
+  <div class="top-bar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="<?php echo base_url('index.php/Home/index');?>"><img src="<?php echo $this->config->item('base_url'); ?>/img/assets/wedlio_logo.png" class="responsive"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="top-nav navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li><a href="<?php echo base_url('index.php/Home/PlanningTools');?>"><div class="dropdown">
                 <button class="dropbtn">planning tools</button>
@@ -74,13 +78,22 @@
 
           
           
-</nav>
+      </div> <!-- top-nav -->
+    </nav> <!-- navbar -->
+  </div> <!-- top-bar -->
 
-<div class="container-fluid">
-  <div class="row">
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+
+<div style="z-index: -1;" class="container-fluid">
+  <div style="z-index: -1;" class="row">
+    <nav  style="z-index: -1;" class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
+          <br>
+
+          <br>
+          <li></li>
+          <li></li>
+
           <li class="nav-item">
             <a class="nav-link active" href="#">
               <span data-feather="home"></span>
@@ -181,7 +194,7 @@
       <div class="card-body">
         <h5 class="card-title">Sunset</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+       <a href="<?php echo base_url('index.php/customer/rating');?>" class="btn btn-outline-success btn-sm">Read More</a>
         <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
       </div>
      </div>

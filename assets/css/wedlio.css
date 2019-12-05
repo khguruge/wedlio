@@ -1,13 +1,22 @@
-div.top-nav {
+.navbar {
     background-color: white;
 }
 
-div.top-bar nav a img {
-    width: 100px;
-    height: 50px;
+.top-nav {
+    background-color: white;
 }
 
-div.dropdown button {
+.navbar-brand {
+    background-color: white;
+}
+
+.top-bar nav a img {
+    width: 100px;
+    height: 50px;\
+    background-color: white;
+}
+
+.dropdown button {
   text-transform: uppercase;
   width: 180px;
 }
