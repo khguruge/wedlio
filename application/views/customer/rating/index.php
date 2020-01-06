@@ -1,54 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- jQuery -->
+<?php include('header.php'); ?>
 
+<script src="<?php echo base_url('assets/js/rating.js');?>"></script>
 
-<title>PHPCODE : Code Star Rating System with Ajax, PHP and MySQL</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body class="">
-<div role="navigation" class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="https://phpcodeinfomation.blogspot.com/p/php-script.html" class="navbar-brand">PHPCODE</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="https://phpcodeinfomation.blogspot.com/p/php-script.html">Home</a></li>
-           
-          </ul>
-         
-        </div><!--/.nav-collapse -->
-      </div>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css');?>">
+
+<div class="container">
+<h2>Himash Photography</h2>	
+<div id="slideshow" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="<?php echo $this->config->item('base_url'); ?>/img/assets/wedding.jpg" class="responsive" alt="Third slide">
     </div>
-	
-	<div class="container" style="min-height:500px;">
-	<div class=''>
-	</div>
-<div class="container">		
-	<h2>Example: Star Rating System with Ajax, PHP and MySQL</h2>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php echo $this->config->item('base_url'); ?>/img/assets/wedding.jpg" class="responsive" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="<?php echo $this->config->item('base_url'); ?>/img/assets/wedding.jpg" class="responsive" alt="Third slide">
+    </div>
+
+  </div> <!-- carousel-inner -->
+</div> <!-- slideshow -->
+<h3>About This Vendor
+</h3>
+We are a group of passionate and dedicated friends from different walks of life with hundreds of weddings under our belts. We love what we do because we enjoy the humanly connections that take place during weddings. Experienced with weddings of all cultures we will give you a diverse, fun, tear jerking, and stress-free experience!
+
+<br><br>
 	<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "phpinfo";
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
+	include_once("db_connect.php");
 	$ratingDetails = "SELECT ratingNumber FROM item_rating";
 	$rateResult = mysqli_query($conn, $ratingDetails) or die("database error:". mysqli_error($conn));
 	$ratingNumber = 0;
@@ -183,7 +161,7 @@ if (mysqli_connect_errno()) {
 				</div>
 			</div>		
 			<div class="col-sm-3">
-				<button type="button" id="rateProduct" class="btn btn-default">Rate this product</button>
+				<button type="button" id="rateProduct" class="btn btn-default">Rate Vender</button>
 			</div>		
 		</div>
 		<div class="row">
@@ -232,7 +210,7 @@ if (mysqli_connect_errno()) {
 			<div class="col-sm-12">
 				<form id="ratingForm" method="POST">					
 					<div class="form-group">
-						<h4>Rate this product</h4>
+						<h4>Rate Vender</h4>
 						<button type="button" class="btn btn-warning btn-sm rateButton" aria-label="Left Align">
 						  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 						</button>
@@ -270,12 +248,7 @@ if (mysqli_connect_errno()) {
 		<a class="btn btn-default read-more" style="background:#3399ff;color:white" href="https://phpcodeinfomation.blogspot.com/p/php-script.html">Back</a>		
 	</div>
 </div>	
-<div class="insert-post-ads1" style="margin-top:20px;">
-
-</div>
-</div>
-</body></html>
-
+<?php include('footer.php');?>
 
 
 

@@ -1,66 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- jQuery -->
+<?php include('header.php'); ?>
 
 <title>PHPCODE : Code Star Rating System with Ajax, PHP and MySQL</title>
-<script src="rating.js"></script>
+<script src="<?php echo base_url('assets/js/rating.js');?>"></script>
 <link rel="stylesheet" href="style.css">
-
-
-</head>
-<body class="">
-<div role="navigation" class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="https://phpcodeinfomation.blogspot.com/p/php-script.html" class="navbar-brand">PHPCODE</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="https://phpcodeinfomation.blogspot.com/p/php-script.html">Home</a></li>
-           
-          </ul>
-         
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-	
-	<div class="container" style="min-height:500px;">
-	<div class=''>
-	</div>
-
-
+<?php include('container.php');?>
 <div class="container">		
-
 	<h2>Example: Star Rating System with Ajax, PHP and MySQL</h2>
-
-	
-
 	<?php
-/* Database connection start */
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "wedlio";
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
-
-
-	$ratingDetails = "SELECT ratingNumber FROM rating";
+	include_once("db_connect.php");
+	$ratingDetails = "SELECT ratingNumber FROM item_rating";
 	$rateResult = mysqli_query($conn, $ratingDetails) or die("database error:". mysqli_error($conn));
 	$ratingNumber = 0;
 	$count = 0;
@@ -281,12 +229,8 @@ if (mysqli_connect_errno()) {
 		<a class="btn btn-default read-more" style="background:#3399ff;color:white" href="https://phpcodeinfomation.blogspot.com/p/php-script.html">Back</a>		
 	</div>
 </div>	
+<?php include('footer.php');?>
 
-<div class="insert-post-ads1" style="margin-top:20px;">
-
-</div>
-</div>
-</body></html>
 
 
 

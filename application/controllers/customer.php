@@ -11,7 +11,7 @@ class customer extends CI_Controller {
 
     public function Rating (){
 
-    	$this->load->view('customer/hi');
+    	$this->load->view('customer/rating/index');
 
     }
 

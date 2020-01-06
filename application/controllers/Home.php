@@ -40,7 +40,7 @@ class Home extends CI_Controller {
 
 	public function LocalVendors(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
+		// $this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('header_items/local_vendor');
 		$this->load->view('footer');
 	}
@@ -78,56 +78,51 @@ class Home extends CI_Controller {
 
 	public function WeddingPlanners(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
+		// $this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/wedding_planners');
 		$this->load->view('footer');
 	}
 
 	public function ReceptionVenues(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
+		// $this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/reception_venues');
 		$this->load->view('footer');
 	}
 
 	public function Videographers(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/videographers');
 		$this->load->view('footer');
 	}
 
 	public function Photographers(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
+
 		$this->load->view('local_vendor_items/photographers');
-		$this->load->view('footer');
+	
 	}
 
 	public function BridalSalons(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/bridal_salons');
 		$this->load->view('footer');
 	}
 
 	public function DJs(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/djs');
 		$this->load->view('footer');
 	}
 
 	public function WeddingBands(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/wedding_bands');
 		$this->load->view('footer');
 	}
 
 	public function Rentals(){
 		$this->load->view('header');
-		$this->load->view('local_vendor_items/local_vendor_header');
 		$this->load->view('local_vendor_items/rentals');
 		$this->load->view('footer');
 	}

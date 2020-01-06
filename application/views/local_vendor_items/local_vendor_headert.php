@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="hi responsive">
+  <nav class="navbar-temp navbar-expand-sm navbar-light bg-light responsive">
   
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
@@ -29,3 +30,4 @@
     </ul>
   </div>
 </nav>
+</div>

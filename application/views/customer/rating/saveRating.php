@@ -1,13 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "phpinfo";
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
+include_once("db_connect.php");
 if(!empty($_POST['rating']) && !empty($_POST['itemId'])){
 	$itemId = $_POST['itemId'];
 	$userID = 1234567;		
